@@ -19,15 +19,14 @@ namespace HashTable
         /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Welcome to Hashmap.");
-            ///Creating reference of MyMapNode.
+            Console.WriteLine("Hello Welcome to Hashmap.");            
             string paragraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
-            //Split converts paragraph  into array of sub strings
+            ///Split converts paragraph  into array of sub strings.
             string[] para = paragraph.Split(" ");
+            ///Creating reference of MyMapNode.
             MyMapNode<int, string> hash = new MyMapNode<int, string>(para.Length);
             int key = 0;
-            //Loop iterates on paragraph and adds key and value of each substing
-            //To hash
+            ///foreach iterates on paragraph and adds key and value to hash.
             foreach (string word in para)
             {
                 hash.Add(key, word);

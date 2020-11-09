@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace HashTable
 {
-    class MyMapNode<K,V>
+    class MyMapNode<K, V>
     {
         ///Variable
         public readonly int size;
@@ -114,9 +114,9 @@ namespace HashTable
         /// <summary>
         ///Gives the count the of word provided.
         /// </summary>
-        public void GetFrequency(V value)
+        public int GetFrequency(V value)
         {
-            int count = 0;
+            int frequency = 0;
             ///Iterating to get the key value of each item.
             foreach (LinkedList<keyValue<K, V>> list in items)
             {
@@ -129,10 +129,10 @@ namespace HashTable
                     if (obj.Equals(null))
                         continue;
                     if (obj.value.Equals(value))
-                        count++;
+                        frequency++;
                 }
-            }
-            Console.WriteLine("Frequency of {0} is {1}", value, count);
+            }            
+            return frequency;
         }
     }
 }

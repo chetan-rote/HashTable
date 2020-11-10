@@ -124,11 +124,11 @@ namespace HashTable
                 if (list == null)
                     continue;
                 ///Iterating to get the value of the item in linked list.
-                foreach (keyValue<K, V> obj in list)
+                foreach (keyValue<K, V> item in list)
                 {
-                    if (obj.Equals(null))
+                    if (item.Equals(null))
                         continue;
-                    if (obj.value.Equals(value))
+                    if (item.value.Equals(value))
                         frequency++;
                 }
             }            
@@ -144,13 +144,13 @@ namespace HashTable
             {
                 if (list == null)
                     continue;
-                foreach (keyValue<K, V> obj in list)
+                foreach (keyValue<K, V> item in list)
                 {
-                    if (obj.Equals(null))
+                    if (item.Equals(null))
                         continue;
-                    if (obj.value.Equals(value))
+                    if (item.value.Equals(value))
                     {
-                        Remove(obj.key);
+                        Remove(item.key);
                         break;
                     }
                 }
